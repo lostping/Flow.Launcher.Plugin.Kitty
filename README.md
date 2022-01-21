@@ -7,8 +7,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-> :x: **There is no official release yet**: I need to do some final tests before releasing the first version - _LostPing_
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
