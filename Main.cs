@@ -192,11 +192,9 @@ namespace Flow.Launcher.Plugin.Kitty
         /// <returns>If launching Putty succeeded</returns>
         private bool LaunchKittySession(bool PuttyOrKitty, KittyEntryType ket, string session, KittySession kittySession = null)
         {
-            //TODO: Add portable for kload - it's different path than when using from registry ("Sessions" folder + kittysession.identifier)
-
             try
             {
-                var kittyPath = Path.Combine(Path.GetDirectoryName(_settings.KittyExePath), "kitty_portable.exe");
+                var kittyPath = _settings.KittyExePath;
                 string sessionsPath = Path.Combine(Path.GetDirectoryName(_settings.KittyExePath), "Sessions");
                 if (string.IsNullOrEmpty(_settings.KittyExePath))
                 {
