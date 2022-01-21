@@ -1,0 +1,42 @@
+﻿namespace Flow.Launcher.Plugin.Kitty.Helper
+{
+    public class KittySession
+    {
+        /// <summary>
+        /// The Kitty Session connection identifier
+        /// </summary>
+        public string Identifier { get; set; }
+
+        /// <summary>
+        /// The Protocol that is used in the Kitty Session
+        /// </summary>
+        public string Protocol { get; set; }
+
+        /// <summary>
+        /// The optional Username that is used in the Kitty Session
+        /// </summary>
+        public string Username { get; set; }
+
+        /// <summary>
+        /// The Hostname that is used in the Kitty Session
+        /// </summary>
+        public string Hostname { get; set; }
+
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>
+        /// A string that represents the current object.
+        /// </returns>
+        public override string ToString()
+        {
+            if (string.IsNullOrEmpty(Username))
+            {
+                return string.Format("{0}://{1}", Protocol, Hostname);
+            }
+
+            return string.Format("{0}://{1}@{2}", Protocol, Username, Hostname);
+        }
+    }
+}

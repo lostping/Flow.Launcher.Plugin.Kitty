@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--  Plugin Info  -->
+    <system:String x:Key="flowlauncher_plugin_kitty_plugin_name">Kitty Session Launcher</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_plugin_description">Start your Kitty Sessions</system:String>
+
+    <!--  Settings  -->
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_addKitty">Always add Kitty executable to search results?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_isPortable">Is Kitty portable?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_openFullscreen">Open Kitty sessions fullscreen?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_puttyInsteadOfKitty">Use Putty sessions instead of Kitty?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyExePath">Kitty executable path</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyOpenExePath">Select Kitty executable</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyDownload">Download Kitty portable</system:String>
+    
+    <!-- Main -->
+    <system:String x:Key="flowlauncher_plugin_kitty_start">Start</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_open">Open</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_default">default</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_session">session</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_without">without</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings">Settings</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_openConfigs">Open Kitty/Putty configuration</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_openDialogExe">Executable file</system:String>
+    
+    <!-- Messages -->
+    <system:String x:Key="flowlauncher_plugin_kitty_pathNotSet">App path not set</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_configPlugin">Please configure the Kitty plugin!</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_error">Error</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_download">download</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_sessionFolderMissing">Session folder missing</system:String>
+
+</ResourceDictionary>

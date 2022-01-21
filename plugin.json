@@ -1,0 +1,12 @@
+{
+  "ActionKeyword": "kt",
+  "Author": "LostPing",
+  "Description": "Launch Kitty Sessions",
+  "ExecuteFileName": "Flow.Launcher.Plugin.Kitty.dll",
+  "ID": "898FC7F0-4F38-401B-82E0-A852798C2D59",
+  "IcoPath": "icon.png",
+  "Language": "csharp",
+  "Name": "Kitty",
+  "Version": "1.0.4",
+  "Website": "https://github.com/lostping/Flow.Launcher.Plugin.Kitty"
+}
