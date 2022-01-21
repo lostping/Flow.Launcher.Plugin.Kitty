@@ -4,17 +4,17 @@
     xmlns:system="clr-namespace:System;assembly=mscorlib">
 
     <!--  Plugin Info  -->
-    <system:String x:Key="flowlauncher_plugin_kitty_plugin_name">Kitty Session Starter</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_plugin_description">Starte deine Kitty-Sitzungen</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_plugin_name">KiTTY Session Starter</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_plugin_description">Starte deine KiTTY-Sitzungen</system:String>
 
     <!--  Settings  -->
-    <system:String x:Key="flowlauncher_plugin_kitty_settings_addKitty">Kitty immer zu den Suchergebnissen hinzufügen?</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_settings_isPortable">Ist Kitty portabel?</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_settings_openFullscreen">Kitty im Vollbild öffnen?</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_settings_puttyInsteadOfKitty">Verwende Putty- statt Kitty-Sitzungen?</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyExePath">Pfad zur Kitty Programmdatei</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyOpenExePath">Kitty .EXE wählen</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyDownload">Portables Kitty herunterladen</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_addKitty">KiTTY immer zu den Suchergebnissen hinzufügen?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_isPortable">Ist KiTTY portabel?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_openFullscreen">KiTTY im Vollbild öffnen?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_puttyInsteadOfKitty">Verwende PuTTY- statt KiTTY-Sitzungen?</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyExePath">Pfad zur KiTTY Programmdatei</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyOpenExePath">KiTTY .EXE wählen</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_settings_kittyDownload">Portables KiTTY herunterladen</system:String>
     
     <!-- Main -->
     <system:String x:Key="flowlauncher_plugin_kitty_start">Starte</system:String>
@@ -23,12 +23,12 @@
     <system:String x:Key="flowlauncher_plugin_kitty_session">Sitzung</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_without">ohne</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_settings">Einstellungen</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_openConfigs">Öffne Kitty/Putty Konfiguration</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_openConfigs">Öffne KiTTY/PuTTY Konfiguration</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_openDialogExe">Ausführbare Datei</system:String>
     
     <!-- Messages -->
     <system:String x:Key="flowlauncher_plugin_kitty_pathNotSet">Pfad nicht eingestellt</system:String>
-    <system:String x:Key="flowlauncher_plugin_kitty_configPlugin">Bitte konfiguriere das Kitty plugin!</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_configPlugin">Bitte konfiguriere das KiTTY plugin!</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_error">Fehler</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_download">Download</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_sessionFolderMissing">Sitzungspfad fehlt</system:String>

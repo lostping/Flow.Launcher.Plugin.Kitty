@@ -12,16 +12,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/lostping/Flow.Launcher.Plugin.Kitty">
+  <a href="https://github.com/lostping/Flow.Launcher.Plugin.KiTTY">
     <img src="readme_images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
-  <h1 align="center">Kitty session launcher plugin</h3>
+  <h1 align="center">KiTTY session launcher plugin</h3>
   <h2>for Flow Launcher</h4>
 
-  <a href="https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues">Report Bug</a>
+  <a href="https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues">Report Bug</a>
     ·
-    <a href="https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues">Request Feature</a>
+    <a href="https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues">Request Feature</a>
   </p>
 </div>
 
@@ -58,15 +58,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Kitty Plugin in Action][product-screenshot]](https://github.com/lostping/Flow.Launcher.Plugin.Kitty)
+[![KiTTY Plugin in Action][product-screenshot]](https://github.com/lostping/Flow.Launcher.Plugin.KiTTY)
 
 This plugin was intended to be a simple fork and modification. It ended as an independent project, but was heavily inspired by the awesome [Putty plugin for Flow Launcher](https://github.com/jjw24/Flow.Launcher.Plugin.Putty).
 
-As a plugin to solely provide simple access to Kitty sessions, it somehow became a hybrid that supports Kitty AND Putty sessions:
+As a plugin to solely provide simple access to KiTTY sessions, it somehow became a hybrid that supports KiTTY AND Putty sessions:
 
 * Putty sessions (registry)
-* Kitty sessions (registry)
-* Kitty sessions (session files, portable mode)
+* KiTTY sessions (registry)
+* KiTTY sessions (session files, portable mode)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -92,10 +92,13 @@ The easiest way to install the plugin is to use the plugin manager
 ### Installation 🔌
 
 1. <kbd>Alt</kbd>+ <kbd>Space</kbd> - Open flow launcher search box
-2. Type <kbd>pm install kitty</kbd> + press <kbd>ENTER</kbd> to install plugin
+2. Type <kbd>pm install KiTTY</kbd> + press <kbd>ENTER</kbd> to install plugin
 
 ### Configuration ⚙
-Press the *download* button in kitty plugin settings to get the portable version or the *choose* button to pick your custom Kitty executable
+Press the *download* button in KiTTY plugin settings to get the portable version or the *choose* button to pick your custom KiTTY executable.
+If you use the download option with the portable KiTTY executable, it will be removed (with all settings) when uninstalling the plugin.
+
+:warning: You must disable the KiTTY portable option if you want to use KiTTY or PuTTY non portable mode (from the Windows registry) !!!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -119,7 +122,7 @@ Press the *download* button in kitty plugin settings to get the portable version
 - [ ] More code comments
 - [ ] You name it
 
-See the [open issues](https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -157,7 +160,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 LostPing - [Github](https://github.com/lostping/)
 
-Project Link: [https://github.com/lostping/Flow.Launcher.Plugin.Kitty](https://github.com/lostping/Flow.Launcher.Plugin.Kitty)
+Project Link: [https://github.com/lostping/Flow.Launcher.Plugin.KiTTY](https://github.com/lostping/Flow.Launcher.Plugin.KiTTY)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -180,14 +183,14 @@ Who made this project possible?
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
-[contributors-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
-[forks-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/network/members
-[stars-shield]: https://img.shields.io/github/stars/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
-[stars-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
-[issues-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues
-[license-shield]: https://img.shields.io/github/license/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
-[license-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/blob/master/LICENSE
-[product-screenshot]: readme_images/flow_kitty.gif
+[contributors-shield]: https://img.shields.io/github/contributors/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
+[contributors-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
+[forks-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/network/members
+[stars-shield]: https://img.shields.io/github/stars/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
+[stars-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
+[issues-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues
+[license-shield]: https://img.shields.io/github/license/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
+[license-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/blob/master/LICENSE
+[product-screenshot]: readme_images/flow_KiTTY.gif

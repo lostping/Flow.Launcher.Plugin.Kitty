@@ -56,4 +56,12 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="rd /s /q &quot;$(TargetDir)Languages\&quot;&#xD;&#xA;rd /s /q &quot;$(TargetDir)ref\&quot;" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="del  &quot;$(TargetDir)*.pdb&quot; /q&#xD;&#xA;del  &quot;$(TargetDir)*.xml&quot; /q&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Build\$(ConfigurationName)\&quot; /E /H /Y /C&#xD;&#xA;&#xD;&#xA;if $(ConfigurationName) == Release (&#xD;&#xA;    powershell Compress-Archive -Path '$(SolutionDir)Build\$(ConfigurationName)\*' -DestinationPath '$(SolutionDir)Build\$(ProjectName).zip' -Force&#xD;&#xA;)" />
+  </Target>
+
 </Project>
