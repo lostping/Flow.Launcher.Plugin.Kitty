@@ -30,6 +30,14 @@ namespace Flow.Launcher.Plugin.Kitty.Helper
                         string[] files = Directory.GetFiles(sessionsPath);
                         foreach (var file in files)
                         {
+                            string filename = Path.GetFileName(file);
+
+                            // skip default settings entry
+                            if(filename.Contains("Default%20Settings", StringComparison.OrdinalIgnoreCase))
+                            {
+                                continue;
+                            }
+
                             try
                             {
                                 string SessionFileContent = File.ReadAllText(Path.Combine(sessionsPath, file));
@@ -38,7 +46,7 @@ namespace Flow.Launcher.Plugin.Kitty.Helper
                                 Match matchesU = KittyRegex.theUsername.Match(SessionFileContent);
                                 results.Add(new KittySession
                                 {
-                                    Identifier = Path.GetFileName(file),
+                                    Identifier = filename,
                                     Protocol = matchesP.Groups["Protocol"].ToString(),
                                     Username = matchesU.Groups["UserName"].ToString(),
                                     Hostname = matchesH.Groups["HostName"].ToString(),
@@ -85,6 +93,13 @@ namespace Flow.Launcher.Plugin.Kitty.Helper
                                     {
                                         continue;
                                     }
+
+                                    // skip default settings
+                                    if (subKey.Contains("Default%20Settings", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        continue;
+                                    }
+
                                     try
                                     {
                                         results.Add(new KittySession
@@ -120,6 +135,13 @@ namespace Flow.Launcher.Plugin.Kitty.Helper
                                     {
                                         continue;
                                     }
+
+                                    // skip default settings
+                                    if (subKey.Contains("Default%20Settings", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        continue;
+                                    }
+
                                     try
                                     {
                                         results.Add(new KittySession

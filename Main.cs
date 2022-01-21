@@ -14,7 +14,7 @@ namespace Flow.Launcher.Plugin.Kitty
         private PluginInitContext _context;
         private Settings _settings;
         public IKittySessionService KittySessionService { get; set; }
-        public enum KittyEntryType { None, KittyDefault, UserEntry, UnknownHost}
+        public enum KittyEntryType { None, UserEntry, UnknownHost}
 
         public Kitty()
         {
@@ -41,7 +41,7 @@ namespace Flow.Launcher.Plugin.Kitty
                 var allKittySessions =
                     KittySessionService
                     .GetAll(_settings, _context)
-                    .Select(kittySession => CreateResult(_settings.PuttyInsteadOfKitty, KittyEntryType.UserEntry, kittySession.Identifier, kittySession.ToString(), kittySession:kittySession));
+                    .Select(kittySession => CreateResult(_settings.PuttyInsteadOfKitty, KittyEntryType.UserEntry, kittySession.Identifier, kittySession.Identifier.UrlDecode("iso-8859-1"), kittySession.ToString(), kittySession:kittySession));
 
                 return results.Concat(allKittySessions).ToList();
             }
@@ -49,13 +49,13 @@ namespace Flow.Launcher.Plugin.Kitty
             // Filter sessions for matches
             var queryKittySessions =
                 KittySessionService.GetAll(_settings, _context)
-                .Where(session => session.Identifier.ToLowerInvariant().Contains(querySearch.ToLowerInvariant()));
+                .Where(session => session.Identifier.ToLowerInvariant().Contains(querySearch.ToLowerInvariant().UrlEncode("iso-8859-1")));
 
             // If no filtered elements found return result to connect kitty to the entered hostname (or IP)
             if (!queryKittySessions.Any())
             {
-                var session = _context.API.GetTranslation("flowlauncher_plugin_kitty_settings_startSession");
-                results.Add(CreateResult(_settings.PuttyInsteadOfKitty, KittyEntryType.UnknownHost, querySearch, $"{session} {querySearch}", 60));
+                var session = string.Join(" ", _context.API.GetTranslation("flowlauncher_plugin_kitty_start"), _context.API.GetTranslation("flowlauncher_plugin_kitty_host"));
+                results.Add(CreateResult(_settings.PuttyInsteadOfKitty, KittyEntryType.UnknownHost, querySearch, "", $"{session} {querySearch}", 60));
 
                 return results;
             }
@@ -63,18 +63,10 @@ namespace Flow.Launcher.Plugin.Kitty
             // If filtered sessions matched add them to the results
             foreach (var kittySession in queryKittySessions)
             {
-                // process default kitty session slightly different than the others
-                if (kittySession.Identifier == "Default%20Settings")
+                // silently skip sessions without hostname or ip address
+                if (!string.IsNullOrEmpty(kittySession.Hostname))
                 {
-                    results.Add(CreateResult(_settings.PuttyInsteadOfKitty, KittyEntryType.KittyDefault, "", kittySession.ToString(), kittySession:kittySession));
-                } 
-                else
-                {
-                    // silently skip sessions without hostname or ip address
-                    if (!string.IsNullOrEmpty(kittySession.Hostname))
-                    {
-                        results.Add(CreateResult(_settings.PuttyInsteadOfKitty, KittyEntryType.UserEntry, kittySession.Identifier, kittySession.ToString(), kittySession: kittySession));
-                    }
+                    results.Add(CreateResult(_settings.PuttyInsteadOfKitty, KittyEntryType.UserEntry, kittySession.Identifier, kittySession.Identifier.UrlDecode("iso-8859-1"), kittySession.ToString(), kittySession: kittySession));
                 }
             }
 
@@ -101,7 +93,7 @@ namespace Flow.Launcher.Plugin.Kitty
         /// </summary>
         /// <returns>A Result object containing the KittySession identifier and its connection string</returns>
         private Result CreateResult(
-            bool PuttyOrKitty, KittyEntryType ket, string title = "", string subTitle = "", int score = 50, KittySession kittySession = null)
+            bool PuttyOrKitty, KittyEntryType ket, string title = "", string title_unencoded = "", string subTitle = "", int score = 50, KittySession kittySession = null)
         {
 
             #region translations
@@ -123,15 +115,10 @@ namespace Flow.Launcher.Plugin.Kitty
             string trDefault = _context.API.GetTranslation("flowlauncher_plugin_kitty_default");
             string trSession = _context.API.GetTranslation("flowlauncher_plugin_kitty_session");
             string trSettings = _context.API.GetTranslation("flowlauncher_plugin_kitty_settings");
-
-            // fix defaults settings i18n display in results
-            if (title == "Default%20Settings")
-            {
-                title = trDefault + " " + trSettings;
-                subTitle = String.Join(" ", trOpen, trDefault, appName, trSession);
-            }
             #endregion
 
+
+            
             switch (ket)
             {
                 case KittyEntryType.None:
@@ -143,21 +130,11 @@ namespace Flow.Launcher.Plugin.Kitty
                         Action = context => LaunchKittySession(PuttyOrKitty, ket, string.Empty),
                         Score = score = 0
                     };
-                case KittyEntryType.KittyDefault:
-                    // KittyDefault starts Default Session
-                    return new Result
-                    {
-                        Title = $"{trDefault} {trSettings}",
-                        SubTitle = $"{trOpen} {trDefault} {appName} {trSession}",
-                        IcoPath = "icon.png",
-                        Action = context => LaunchKittySession(PuttyOrKitty, ket, "Default%20Settings"),
-                        Score = score = 0
-                    };
                 case KittyEntryType.UserEntry:
                     // UserEntry starts selected session
                     return new Result
                     {
-                        Title = title,
+                        Title = title_unencoded,
                         SubTitle = subTitle,
                         IcoPath = "icon.png",
                         Action = context => LaunchKittySession(PuttyOrKitty, ket, title, kittySession),
@@ -211,23 +188,6 @@ namespace Flow.Launcher.Plugin.Kitty
                 {
                     case KittyEntryType.None:
                         p.StartInfo.Arguments = "";
-                        break;
-                    case KittyEntryType.KittyDefault:
-                        if (PuttyOrKitty)
-                        {
-                            p.StartInfo.Arguments = "-load \"Settings\""; // start session the putty way (registry)
-                        } 
-                        else
-                        {
-                            if (_settings.IsKittyPortable)
-                            {
-                                p.StartInfo.Arguments = "-kload \"" + Path.Combine(sessionsPath, "Default%20Settings") + "\""; // start session the kitty way (portable)
-                            }
-                            else
-                            {
-                                p.StartInfo.Arguments = "-kload \"Default%20Settings\""; // start session the kitty way (registry)
-                            }
-                        }
                         break;
                     case KittyEntryType.UserEntry:
                         if (PuttyOrKitty)

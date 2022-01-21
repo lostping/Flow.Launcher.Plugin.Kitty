@@ -21,6 +21,7 @@
     <system:String x:Key="flowlauncher_plugin_kitty_open">Open</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_default">default</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_session">session</system:String>
+    <system:String x:Key="flowlauncher_plugin_kitty_host">host</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_without">without</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_settings">Settings</system:String>
     <system:String x:Key="flowlauncher_plugin_kitty_openConfigs">Open KiTTY/PuTTY configuration</system:String>

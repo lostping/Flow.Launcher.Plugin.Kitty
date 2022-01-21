@@ -11,13 +11,20 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <UseWPF>true</UseWPF>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugSymbols>false</DebugSymbols>
     <DebugType>None</DebugType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+    <Page Remove="Properties\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Page Remove="Languages\de.xaml" />
@@ -51,14 +58,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="rd /s /q &quot;$(TargetDir)Languages\&quot;&#xD;&#xA;rd /s /q &quot;$(TargetDir)ref\&quot;" />
-  </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="del  &quot;$(TargetDir)*.pdb&quot; /q&#xD;&#xA;del  &quot;$(TargetDir)*.xml&quot; /q&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Build\$(ConfigurationName)\&quot; /E /H /Y /C&#xD;&#xA;&#xD;&#xA;if $(ConfigurationName) == Release (&#xD;&#xA;    powershell Compress-Archive -Path '$(SolutionDir)Build\$(ConfigurationName)\*' -DestinationPath '$(SolutionDir)Build\$(ProjectName).zip' -Force&#xD;&#xA;)" />
