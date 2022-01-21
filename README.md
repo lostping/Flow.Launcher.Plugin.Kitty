@@ -10,16 +10,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/lostping/Flow.Launcher.Plugin.KiTTY">
+  <a href="https://github.com/lostping/Flow.Launcher.Plugin.Kitty">
     <img src="readme_images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
   <h1 align="center">KiTTY session launcher plugin</h3>
   <h2>for Flow Launcher</h4>
 
-  <a href="https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues">Report Bug</a>
+  <a href="https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues">Report Bug</a>
     ·
-    <a href="https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues">Request Feature</a>
+    <a href="https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues">Request Feature</a>
   </p>
 </div>
 
@@ -56,13 +56,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![KiTTY Plugin in Action][product-screenshot]](https://github.com/lostping/Flow.Launcher.Plugin.KiTTY)
+[![KiTTY Plugin in Action][product-screenshot]](https://github.com/lostping/Flow.Launcher.Plugin.Kitty)
 
-This plugin was intended to be a simple fork and modification. It ended as an independent project, but was heavily inspired by the awesome [Putty plugin for Flow Launcher](https://github.com/jjw24/Flow.Launcher.Plugin.Putty).
+This plugin was intended to be a simple fork and modification. It ended as an independent project, but was heavily inspired by the awesome [PuTTY plugin for Flow Launcher](https://github.com/jjw24/Flow.Launcher.Plugin.Putty).
 
-As a plugin to solely provide simple access to KiTTY sessions, it somehow became a hybrid that supports KiTTY AND Putty sessions:
+As a plugin to solely provide simple access to KiTTY sessions, it somehow became a hybrid that supports KiTTY AND PuTTY sessions:
 
-* Putty sessions (registry)
+* PuTTY sessions (registry)
 * KiTTY sessions (registry)
 * KiTTY sessions (session files, portable mode)
 
@@ -120,7 +120,7 @@ If you use the download option with the portable KiTTY executable, it will be re
 - [ ] More code comments
 - [ ] You name it
 
-See the [open issues](https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -158,7 +158,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 LostPing - [Github](https://github.com/lostping/)
 
-Project Link: [https://github.com/lostping/Flow.Launcher.Plugin.KiTTY](https://github.com/lostping/Flow.Launcher.Plugin.KiTTY)
+Project Link: [https://github.com/lostping/Flow.Launcher.Plugin.Kitty](https://github.com/lostping/Flow.Launcher.Plugin.Kitty)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -170,7 +170,7 @@ Project Link: [https://github.com/lostping/Flow.Launcher.Plugin.KiTTY](https://g
 Who made this project possible?
 
 * [Jeremy Wu's Flow Launcher](https://github.com/jjw24)
-* [Konstantin Zaitcev and Kai Eichinger's Flow Putty Plugin](https://github.com/jjw24/Flow.Launcher.Plugin.Putty)
+* [Konstantin Zaitcev and Kai Eichinger's Flow PuTTY Plugin](https://github.com/jjw24/Flow.Launcher.Plugin.Putty)
 * [Othneildrew's awesome README template](https://github.com/othneildrew/Best-README-Template)
 * [Img Shields](https://shields.io)
 * [GitHub](https://github.com)
@@ -181,14 +181,14 @@ Who made this project possible?
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
-[contributors-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
-[forks-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/network/members
-[stars-shield]: https://img.shields.io/github/stars/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
-[stars-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
-[issues-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/issues
-[license-shield]: https://img.shields.io/github/license/lostping/Flow.Launcher.Plugin.KiTTY.svg?style=flat
-[license-url]: https://github.com/lostping/Flow.Launcher.Plugin.KiTTY/blob/master/LICENSE
-[product-screenshot]: readme_images/flow_KiTTY.gif
+[contributors-shield]: https://img.shields.io/github/contributors/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
+[contributors-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
+[forks-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/network/members
+[stars-shield]: https://img.shields.io/github/stars/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
+[stars-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
+[issues-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/issues
+[license-shield]: https://img.shields.io/github/license/lostping/Flow.Launcher.Plugin.Kitty.svg?style=flat
+[license-url]: https://github.com/lostping/Flow.Launcher.Plugin.Kitty/blob/master/LICENSE
+[product-screenshot]: readme_images/flow_kitty.gif
