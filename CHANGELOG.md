@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project tries to implement the [Semantic Versioning](https://semver.org/spec/v2.0.0.html) Specification (SemVer).
 
+## [1.0.6] - 2022-01-30
+### Fixed
+- Portable Kitty is now saved to plugin settings folder by default to keep the sessions.
+Due to how the Flow launcher update process works, the portable KiTTY-Sessions would be wiped on every plugin update.
 
 ## [1.0.5] - 2022-01-21
 ### Fixed

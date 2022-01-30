@@ -7,6 +7,6 @@
   "IcoPath": "icon.png",
   "Language": "csharp",
   "Name": "Kitty",
-  "Version": "1.0.5",
+  "Version": "1.0.6",
   "Website": "https://github.com/lostping/Flow.Launcher.Plugin.Kitty"
 }

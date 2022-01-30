@@ -96,7 +96,7 @@ The easiest way to install the plugin is to use the plugin manager
 Press the *download* button in KiTTY plugin settings to get the portable version or the *choose* button to pick your custom KiTTY executable.
 If you use the download option with the portable KiTTY executable, it will be removed (with all settings) when uninstalling the plugin.
 
-:warning: You must disable the KiTTY portable option if you want to use KiTTY or PuTTY non portable mode (from the Windows registry) !!!
+:warning: You must disable the KiTTY portable option if you want to use KiTTY or PuTTY non portable mode !!!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

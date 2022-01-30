@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel;
 using Flow.Launcher.Plugin.Kitty.ViewModels;
+using Flow.Launcher.Plugin.Kitty.Helper;
 using Microsoft.Win32;
 namespace Flow.Launcher.Plugin.Kitty
 {
@@ -108,10 +109,9 @@ namespace Flow.Launcher.Plugin.Kitty
         /// </summary>
         private void DownloadKitty_Click(object sender, RoutedEventArgs e)
         {
-            // Save to the plugin directory instead of the user data settings directory 
-            // because it's a portable version and so it can removed along with the plugin.
-            string PluginDir = context.CurrentPluginMetadata.PluginDirectory;
-            KittyDownloadPath = Path.Combine(PluginDir, "kitty_portable.exe");
+            // Save to the plugin settings folder.
+            string PluginSettingsDir = Paths.ReturnPluginSettingsFolder(context);
+            KittyDownloadPath = Path.Combine(PluginSettingsDir, "kitty_portable.exe");
 
             // download async to not block the main thread and listen to the completed event
             try
